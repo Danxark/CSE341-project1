@@ -6,10 +6,11 @@
     "description": "API to manage contacts"
   },
   "servers": [
-    {
-      "url": "http://localhost:3000"
-    }
-  ],
+  {
+    "url": "https://cse341-project1-ei2y.onrender.com",
+    "description": "Render server"
+  }
+],
   "paths": {
     "/contacts": {
       "get": {
