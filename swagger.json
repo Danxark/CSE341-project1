@@ -3,7 +3,7 @@
   "info": {
     "title": "Contacts API",
     "version": "1.0.0",
-    "description": "API para manejar contactos"
+    "description": "API to manage contacts"
   },
   "servers": [
     {
@@ -13,10 +13,10 @@
   "paths": {
     "/contacts": {
       "get": {
-        "summary": "Obtener todos los contactos",
+        "summary": "Get all contacts",
         "responses": {
           "200": {
-            "description": "Lista de contactos",
+            "description": "Contact List",
             "content": {
               "application/json": {
                 "schema": {
@@ -29,7 +29,7 @@
         }
       },
       "post": {
-        "summary": "Crear un nuevo contacto",
+        "summary": "Create new contact",
         "requestBody": {
           "required": true,
           "content": {
@@ -39,20 +39,20 @@
           }
         },
         "responses": {
-          "201": { "description": "Contacto creado" }
+          "201": { "description": "Contact created" }
         }
       }
     },
     "/contacts/{id}": {
       "get": {
-        "summary": "Obtener contacto por ID",
+        "summary": "Get contact by ID",
         "parameters": [
           { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
-        "responses": { "200": { "description": "Contacto encontrado" } }
+        "responses": { "200": { "description": "Contact Found" } }
       },
       "put": {
-        "summary": "Actualizar contacto por ID",
+        "summary": "Update contact by ID",
         "parameters": [
           { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
@@ -62,14 +62,14 @@
             "application/json": { "schema": { "$ref": "#/components/schemas/Contact" } }
           }
         },
-        "responses": { "200": { "description": "Contacto actualizado" } }
+        "responses": { "200": { "description": "Contact Updated" } }
       },
       "delete": {
-        "summary": "Eliminar contacto por ID",
+        "summary": "Delete contact by ID",
         "parameters": [
           { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
         ],
-        "responses": { "200": { "description": "Contacto eliminado" } }
+        "responses": { "200": { "description": "Contact Deleted" } }
       }
     }
   },
